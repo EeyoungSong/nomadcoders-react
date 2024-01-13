@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+import styles from "./Detail.module.css";
 
 function Detail() {
     const {id} = useParams();
@@ -18,9 +19,9 @@ function Detail() {
         getMovie();
     }, [])
     return (
-        <div>
+        <div className={styles.Detail}>
             <h1>{movie?.title}</h1>
-            <img src={movie?.large_cover_image}></img>
+            <img className={styles.Detail__image} src={movie?.large_cover_image}></img>
             <h4>rating : {movie?.rating}</h4>
             <h4>runing time : {movie?.runtime}</h4>
             <h4>year : {movie?.year}</h4>

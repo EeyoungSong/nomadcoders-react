@@ -6,6 +6,7 @@ import {
 
 import Home from "./routes/Home";
 import Detail from "./routes/Detail";
+import Hello from "./routes/Hello";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />}></Route>
         <Route path="/movie/:id" element={<Detail />}></Route>
+        <Route path="/hello" element={<Hello />}></Route>
       </Routes>
     </Router>
   </div>
